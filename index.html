@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-
-
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -34,7 +31,7 @@
             
             <i class="material-icons">&#xe325;<a class="mail-address">+91 9003683184</a></i>
 
-                
+                <nav>
                     <ul class="nav-bar">
                        <li><a href="#">Product</a></li>
                        <li><a href="#">About</a></li>
@@ -52,7 +49,7 @@
     <label for="check" class="jj">
         <i class="fas fa-bars"></i>
     </label>
-    <ul class="secondary-nav">
+    <ul class="bar">
         <li><a href="#">MENS</a></li>
         <li><a href="#">WOMAN</a></li>
         <li><a href="#">KIDS</a></li>
@@ -447,7 +444,7 @@ body {
     
     }
     .nav-bar{
-        margin-top: -13px;
+        margin-top: -21px;
         margin-right: 40px;
         list-style: none;
         width: 100%;
@@ -465,7 +462,7 @@ body {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
     .nav-bar li {
         position: relative;
-        left: 9rem;
+        left: 11rem;
 
     }
 }
@@ -528,54 +525,90 @@ body {
         left: 5%;
     
     }
-    .jj{
-        font-size: 30px;
-        float: right;
-        margin: 1rem;
-        margin-right: 40px;
-        cursor: pointer;
+    nav .bar {
+    float: right;
+    position: relative;
+    top: 5rem;
+    right: 50px;
+
+}
+nav .bar li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 05px;
+
+}
+nav .bar li a{
+    color: #fff;
+    font-size: 11px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.jj{
+    font-size: 30px;
+    color: #fff;
+    line-height: 80px;
+    float: right;
+    cursor: pointer;
+    margin-right: 2rem;
+    display: none;
+    
+}
+/*
+.nav-btn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+*/
+    #check{
         display: none;
+
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    
+    nav .bar li a{
+        font-size: 15px;
+
     }
-     #check{
-        display: none;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+    .jj   {
+        display: block;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
-            .jj {
-                display: block;
-            }
-            .jj i{
-                color: #fff;
-            }
-            .secondary-nav{
-                display: none;
-            }
-        }
-        nav .secondary-nav {
-            position: absolute;
-            top:14%;
-            left: 4%;
-            float: right;
-            margin-left: 28rem;
+    .bar{
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+        margin-top: -7rem;
+        height: 87vh;
+        background:#2c3e50;
+        left: -100%;
+        text-align: center;
+        transition: all .3s;
+
+    }
+    nav .bar li {
         
-        }
-        nav .secondary-nav li {
-            display: inline-block;
-            line-height: 80px;
-            margin: 5px;
-        }
-        nav .secondary-nav li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-            font-size: 11px;
-            padding: 7px 13px;
-            text-transform: uppercase;
-        }
-        li a:hover {
-            text-decoration: none;
-            color: rgb(255, 0, 0);
-            transition: .2s;
-        }
+        display: block;
+        line-height: 48px;
+        margin: 2px;
+    }
+    .bar li a:hover{
+        text-decoration: none;
+        background: none;
+        color:#0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
 
 
 
